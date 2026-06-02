@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Shape, Oscillation Modes and Orientation Dynamics of Aerodynamically Levitated Nanofluid Drops</title>
+  <meta name="description" content="Project page for the Physical Review Fluids (2026) paper on aerodynamically levitated nanofluid drops: characteristic shape, oscillation-mode spectra, and time-resolved 3D orientation. An experimental validation of all accumulated theoretical work on raindrop studies since 1879.">
+  <meta name="keywords" content="raindrop physics, levitating drop, aerodynamic levitation, nanofluid drop, vertical wind tunnel, drop oscillation modes, characteristic shape, two-dimensional video disdrometer, 2DVD, Rayleigh 1879, Lamb 1932, Feng and Beard 1991, Beard and Chuang, drag coefficient, Reynolds number, Weber number, ReWe, surfactant, silicon dioxide nanoparticle, Triton X-100, drop shape, raindrop microphysics, high-speed imaging, 3D orientation reconstruction, Physical Review Fluids, Rible, Dickerson, Truscott, University of Tennessee, KAUST">
+  <meta name="author" content="Gene Patrick S. Rible, Syed Jaffar Raza, Connor K. Traynor, Joshua T. Watkins, Hannah P. Sebek, Alexander R. Bottoms, Tadd T. Truscott, Andrew K. Dickerson">
+
+  <!-- Canonical URL: avoids duplicate-content splits across URL variants -->
+  <link rel="canonical" href="https://genepatrickrible.github.io/levitated-drops/">
+
+  <!-- Google Search Console site-verification token -->
+  <meta name="google-site-verification" content="_FBIuw5tjFAnswzA6hsk9ef-XGoOlv-NTrNg2-ASR5w">
+
+  <!-- Google Scholar citation metadata.
+       Lets Scholar associate this page with the published paper and rank it
+       alongside the DOI page in scholarly search. Format follows the convention
+       used by arXiv, journals, and university preprint servers. -->
+  <meta name="citation_title" content="Shape, oscillation modes, and orientation dynamics of aerodynamically levitated nanofluid drops">
+  <meta name="citation_author" content="Rible, Gene Patrick S.">
+  <meta name="citation_author" content="Raza, Syed Jaffar">
+  <meta name="citation_author" content="Traynor, Connor K.">
+  <meta name="citation_author" content="Watkins, Joshua T.">
+  <meta name="citation_author" content="Sebek, Hannah P.">
+  <meta name="citation_author" content="Bottoms, Alexander R.">
+  <meta name="citation_author" content="Truscott, Tadd T.">
+  <meta name="citation_author" content="Dickerson, Andrew K.">
+  <meta name="citation_publication_date" content="2026/05/15">
+  <meta name="citation_journal_title" content="Physical Review Fluids">
+  <meta name="citation_journal_abbrev" content="Phys. Rev. Fluids">
+  <meta name="citation_publisher" content="American Physical Society">
+  <meta name="citation_issn" content="2469-990X">
+  <meta name="citation_volume" content="11">
+  <meta name="citation_issue" content="5">
+  <meta name="citation_firstpage" content="053604">
+  <meta name="citation_doi" content="10.1103/s7rj-swb3">
+  <meta name="citation_abstract_html_url" content="https://doi.org/10.1103/s7rj-swb3">
+  <meta name="citation_pdf_url" content="https://www.dickersonlab.com/_files/ugd/fb8f64_4551effc1f514a2483417867e42bd38d.pdf">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Aerodynamically Levitated Nanofluid Drops">
+  <meta property="og:description" content="Experimental validation of all accumulated theoretical work on raindrop studies since 1879. Physical Review Fluids 11, 053604 (2026).">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://genepatrickrible.github.io/levitated-drops/">
+  <meta property="og:image" content="https://genepatrickrible.github.io/levitated-drops/static/images/teaser-social.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A nanofluid drop aerodynamically levitated in a vertical wind tunnel.">
+  <meta name="twitter:image" content="https://genepatrickrible.github.io/levitated-drops/static/images/teaser-social.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>">
+
+  <!-- Bulma + icon fonts via CDN (no build step) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Schema.org ScholarlyArticle JSON-LD: feeds Google's rich-result card
+       for academic queries and reinforces the page's identity as a scholarly
+       article tied to the DOI. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Shape, oscillation modes, and orientation dynamics of aerodynamically levitated nanofluid drops",
+    "name": "Shape, oscillation modes, and orientation dynamics of aerodynamically levitated nanofluid drops",
+    "author": [
+      { "@type": "Person", "name": "Gene Patrick S. Rible", "affiliation": "University of Tennessee, Knoxville" },
+      { "@type": "Person", "name": "Syed Jaffar Raza", "affiliation": "University of Tennessee, Knoxville" },
+      { "@type": "Person", "name": "Connor K. Traynor", "affiliation": "University of Tennessee, Knoxville" },
+      { "@type": "Person", "name": "Joshua T. Watkins", "affiliation": "University of Tennessee, Knoxville" },
+      { "@type": "Person", "name": "Hannah P. Sebek", "affiliation": "University of Tennessee, Knoxville" },
+      { "@type": "Person", "name": "Alexander R. Bottoms", "affiliation": "University of Tennessee, Knoxville" },
+      { "@type": "Person", "name": "Tadd T. Truscott", "affiliation": "King Abdullah University of Science and Technology" },
+      { "@type": "Person", "name": "Andrew K. Dickerson", "affiliation": "University of Tennessee, Knoxville" }
+    ],
+    "datePublished": "2026-05-15",
+    "publisher": { "@type": "Organization", "name": "American Physical Society" },
+    "isPartOf": {
+      "@type": "PublicationIssue",
+      "issueNumber": "5",
+      "datePublished": "2026-05-15",
+      "isPartOf": {
+        "@type": ["PublicationVolume", "Periodical"],
+        "volumeNumber": "11",
+        "name": "Physical Review Fluids",
+        "issn": "2469-990X",
+        "publisher": { "@type": "Organization", "name": "American Physical Society" }
+      }
+    },
+    "pageStart": "053604",
+    "identifier": [
+      { "@type": "PropertyValue", "propertyID": "doi", "value": "10.1103/s7rj-swb3" }
+    ],
+    "url": "https://genepatrickrible.github.io/levitated-drops/",
+    "sameAs": "https://doi.org/10.1103/s7rj-swb3",
+    "abstract": "We introduce methods to characterize drop oscillation and shape using a two-camera setup inspired by two-dimensional video disdrometers, enabling three-dimensional reconstruction of drop orientation and dynamics for aerodynamically levitated nanofluid drops. A time-averaged characteristic shape yields a robust volume-equivalent characteristic diameter D0. Frequency analysis along the drop shadow perimeter reveals three dominant modes: axisymmetric (2,0), horizontal (2,2), and transverse (2,1). Low nanoparticle concentrations promote deformation and unsteady orientation, including complete vertical circulation in large drops; beyond a nanoparticle saturation concentration, surface-bound particles stabilize the drop. Surfactant raises that saturation by capturing particles into micelles. The work is an experimental validation of all accumulated theoretical work on raindrop studies since 1879."
+  }
+  </script>
+</head>
+<body>
+
+<!-- ============================== HERO / TITLE ============================== -->
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-2 publication-title">
+            Shape, Oscillation Modes, and Orientation Dynamics of
+            Aerodynamically Levitated Nanofluid Drops
+          </h1>
+
+          <p class="subtitle is-5 tagline">
+            An experimental validation of all accumulated theoretical work on
+            raindrop studies&nbsp;since&nbsp;1879
+          </p>
+
+          <!-- Authors -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Gene Patrick S. Rible<sup>1,&#42;</sup>,</span>
+            <span class="author-block">Syed Jaffar Raza<sup>1</sup>,</span>
+            <span class="author-block">Connor K. Traynor<sup>1</sup>,</span>
+            <span class="author-block">Joshua T. Watkins<sup>1</sup>,</span>
+            <span class="author-block">Hannah P. Sebek<sup>1</sup>,</span>
+            <span class="author-block">Alexander R. Bottoms<sup>1</sup>,</span>
+            <span class="author-block">Tadd T. Truscott<sup>2</sup>,</span>
+            <span class="author-block">Andrew K. Dickerson<sup>1</sup></span>
+          </div>
+
+          <div class="is-size-6 publication-affiliations">
+            <span class="affil-block"><sup>1</sup>Department of Mechanical, Aerospace and Biomedical Engineering, University of Tennessee, Knoxville, TN, USA</span>
+            <br>
+            <span class="affil-block"><sup>2</sup>Physical Science and Engineering Division, King Abdullah University of Science and Technology (KAUST), Thuwal, Saudi Arabia</span>
+            <br>
+            <span class="affil-block is-italic"><sup>&#42;</sup>Contact researchers: <a href="mailto:grible@vols.utk.edu">grible@vols.utk.edu</a></span>
+          </div>
+
+          <!-- Journal badge, clickable, links to DOI -->
+          <p class="publication-venue">
+            <a class="tag is-dark is-medium venue-link"
+               href="https://doi.org/10.1103/s7rj-swb3"
+               target="_blank" rel="noopener">
+              Physical Review Fluids&nbsp;<strong>11</strong>,&nbsp;053604&nbsp;(2026)
+            </a>
+          </p>
+
+          <!-- Link buttons -->
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="https://www.dickersonlab.com/_files/ugd/fb8f64_4551effc1f514a2483417867e42bd38d.pdf"
+                 class="button is-dark is-rounded" target="_blank" rel="noopener">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper (PDF)</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="https://doi.org/10.1103/s7rj-swb3"
+                 class="button is-dark is-rounded" target="_blank" rel="noopener">
+                <span class="icon"><i class="ai ai-doi"></i></span><span>DOI</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="https://github.com/genepatrickrible/Aerodynamic-levitation-of-nanofluid-drops"
+                 class="button is-dark is-rounded" target="_blank" rel="noopener">
+                <span class="icon"><i class="fab fa-github"></i></span><span>Code</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="https://doi.org/10.5281/zenodo.17488370"
+                 class="button is-dark is-rounded" target="_blank" rel="noopener">
+                <span class="icon"><i class="ai ai-zenodo"></i></span><span>Data (Zenodo)</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="https://www.youtube.com/playlist?list=PLaxoeadWOB0pN0QxObsl6vmfSh9PKcmg2"
+                 class="button is-dark is-rounded" target="_blank" rel="noopener">
+                <span class="icon"><i class="fab fa-youtube"></i></span><span>Video</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="https://doi.org/10.5281/zenodo.20493438"
+                 class="button is-dark is-rounded" target="_blank" rel="noopener">
+                <span class="icon"><i class="fas fa-display"></i></span><span>Slides</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <div class="dropdown cite-dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button is-dark is-rounded" aria-haspopup="true" aria-controls="cite-menu">
+                    <span class="icon"><i class="fas fa-quote-right"></i></span>
+                    <span>Cite</span>
+                    <span class="icon is-small"><i class="fas fa-angle-down"></i></span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="cite-menu" role="menu">
+                  <div class="dropdown-content">
+                    <a href="#" class="dropdown-item" data-cite-text
+                       data-citation-text="G. P. S. Rible, S. J. Raza, C. K. Traynor, J. T. Watkins, H. P. Sebek, A. R. Bottoms, T. T. Truscott, and A. K. Dickerson, Phys. Rev. Fluids 11, 053604 (2026). https://doi.org/10.1103/s7rj-swb3"
+                       data-citation-html="G. P. S. Rible, S. J. Raza, C. K. Traynor, J. T. Watkins, H. P. Sebek, A. R. Bottoms, T. T. Truscott, and A. K. Dickerson, &lt;i&gt;Phys. Rev. Fluids&lt;/i&gt; &lt;b&gt;11&lt;/b&gt;, 053604 (2026). https://doi.org/10.1103/s7rj-swb3">
+                      <span class="icon"><i class="fas fa-copy"></i></span><span class="cite-label">Copy as text</span>
+                    </a>
+                    <a href="#citation" class="dropdown-item">
+                      <span class="icon"><i class="fas fa-code"></i></span><span>BibTeX (.bib)</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TEASER ============================== -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <figure class="image teaser-figure">
+      <img src="static/images/teaser.gif"
+           alt="A nanofluid drop oscillating while aerodynamically levitated in the vertical wind tunnel.">
+    </figure>
+    <h2 class="subtitle has-text-centered teaser-caption">
+      A millimetric nanofluid drop held aloft in a vertical wind tunnel. Imaged by two
+      synchronized high-speed cameras to reconstruct its shape, oscillation modes, and 3D orientation.
+    </h2>
+  </div>
+</section>
+
+<!-- ============================== ABSTRACT ============================== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
+        <div class="content">
+          <p>
+            In this experimental study, we introduce methods to characterize drop oscillation
+            and shape using a two-camera setup inspired by two-dimensional video disdrometers.
+            The two cameras maintain close proximity to the levitating drop, enabling
+            high-fidelity three-dimensional reconstruction of drop orientation and dynamics.
+            The prevailing drop shadow in each camera view is extracted to determine a
+            time-averaged characteristic shape, from which a volume-equivalent characteristic
+            diameter <em>D</em><sub>0</sub> is obtained via disk integration. We find strong
+            agreement between our measured <em>D</em><sub>0</sub> and established models of axis
+            ratio and equilibrium drop shape. A frequency analysis along the drop shadow
+            perimeter reveals the presence of three dominant modes, i.e., axisymmetric (2,0),
+            horizontal (2,2), and transverse (2,1), with the axisymmetric mode the most prominent
+            and resilient to noise. We define a nondimensional total oscillation amplitude which
+            enables comparison of oscillation intensities across drop conditions. The addition of
+            nanoparticles increases interfacial tension and, at low concentrations
+            (&lt;0.5% m/m), promotes deformation through heterogeneous distributions and
+            interfacial instabilities. These effects enhance canting amplitude, canting angular
+            velocity, and result in an unsteady orientation, sometimes leading to a full
+            circulation of the drop. Beyond a nanoparticle saturation concentration (NSC) of
+            approximately 0.5% m/m, surface-bound nanoparticles stabilize the drop, reducing
+            canting and total oscillation amplitude. The presence of surfactant increases the NSC
+            by capturing surface particles into micelles, delaying interfacial saturation. These
+            findings offer different tools and insights for characterizing complex oscillation
+            dynamics in levitated multiphase drops, with implications for raindrop physics and
+            fluid-interface studies. Our work is an experimental validation of all the accumulated
+            theoretical work on raindrop studies since 1879.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FIRSTS ============================== -->
+<section class="section has-background-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Firsts in this work</h2>
+    <p class="subtitle is-6 has-text-centered firsts-sub">
+      New experimental tools and observations that, to our knowledge, had not been reported before.
+    </p>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <a class="first-card-link" href="#section-nanoparticles">
+          <div class="first-card">
+            <span class="icon has-text-info"><i class="fas fa-vial fa-lg"></i></span>
+            <h3 class="is-size-5 has-text-weight-bold">Nanofluid levitated drops</h3>
+            <p>First study of how suspended nanoparticles (SiO<sub>2</sub>) reshape the dynamics
+              of an aerodynamically levitated drop.</p>
+          </div>
+        </a>
+      </div>
+      <div class="column is-half">
+        <a class="first-card-link" href="#section-characteristic-shape">
+          <div class="first-card">
+            <span class="icon has-text-info"><i class="fas fa-circle-dot fa-lg"></i></span>
+            <h3 class="is-size-5 has-text-weight-bold">The "characteristic shape"</h3>
+            <p>A time-averaged equilibrium-shape representation that yields a robust drop-size
+              metric <em>D</em><sub>0</sub> from a single viewing plane.</p>
+          </div>
+        </a>
+      </div>
+      <div class="column is-half">
+        <a class="first-card-link" href="#section-modes">
+          <div class="first-card">
+            <span class="icon has-text-info"><i class="fas fa-wave-square fa-lg"></i></span>
+            <h3 class="is-size-5 has-text-weight-bold">All-modes spectral analysis</h3>
+            <p>A spectrogram visualization that exposes <em>every</em> oscillation mode (axisymmetric, horizontal, transverse, and higher-order) from one camera view.</p>
+          </div>
+        </a>
+      </div>
+      <div class="column is-half">
+        <a class="first-card-link" href="#section-orientation">
+          <div class="first-card">
+            <span class="icon has-text-info"><i class="fas fa-cube fa-lg"></i></span>
+            <h3 class="is-size-5 has-text-weight-bold">Time-resolved 3D orientation</h3>
+            <p>The first instantaneous, time-resolved reconstruction of a levitating drop's
+              azimuthal and zenithal orientation through time.</p>
+          </div>
+        </a>
+      </div>
+      <div class="column is-half">
+        <a class="first-card-link" href="#section-drag">
+          <div class="first-card">
+            <span class="icon has-text-info"><i class="fas fa-gauge-high fa-lg"></i></span>
+            <h3 class="is-size-5 has-text-weight-bold">Re·We drag predictor</h3>
+            <p>The product of Reynolds and Weber numbers collapses the drag data better than either
+              alone, unifying inertial, capillary, and viscous effects.</p>
+          </div>
+        </a>
+      </div>
+      <div class="column is-half">
+        <a class="first-card-link" href="#section-circulation">
+          <div class="first-card">
+            <span class="icon has-text-info"><i class="fas fa-rotate fa-lg"></i></span>
+            <h3 class="is-size-5 has-text-weight-bold">Complete vertical circulation</h3>
+            <p>Direct observation of full vertical circulation in large drops
+              (<em>D</em><sub>0</sub>&nbsp;&gt;&nbsp;6&nbsp;mm) under continuous levitation.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== METHOD / RESULT CARDS ============================== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">How it works and what we found</h2>
+
+    <!-- Card: two-camera tunnel -->
+    <div class="result-block" id="section-tunnel">
+      <h3 class="title is-4">Two-camera vertical wind tunnel and 3D tracking</h3>
+      <div class="columns is-vcentered figure-pair">
+        <div class="column">
+          <figure class="image">
+            <img src="static/images/tunnel.png"
+                 alt="Schematic of the vertical wind tunnel and two-camera imaging setup.">
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image">
+            <img src="static/images/tunnel_1.png"
+                 alt="Reconstructed 3D track of a levitating drop from the two synchronized cameras.">
+          </figure>
+        </div>
+      </div>
+      <p class="content">
+        An 8-inch duct fan drives HEPA-filtered, laminarized air upward through a contracting
+        viewing section. A crosswire creates a radial velocity well that centers the drop, whereas
+        the vertical velocity gradient lets it find a stable levitation height. Two synchronized,
+        orthogonally placed high-speed cameras (2000&nbsp;fps) record the drop, and their two 2D
+        tracks are combined to reconstruct its motion in 3D.
+      </p>
+    </div>
+
+    <!-- Card: characteristic shape -->
+    <div class="result-block" id="section-characteristic-shape">
+      <h3 class="title is-4">The characteristic shape and <em>D</em><sub>0</sub></h3>
+      <div class="columns is-vcentered figure-pair">
+        <div class="column">
+          <figure class="image">
+            <img src="static/images/characteristic-shape.png"
+                 alt="Aggregate drop shadow forming the characteristic shape and matching the Beard and Chuang equilibrium model.">
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image">
+            <img src="static/images/characteristic-shape_1.png"
+                 alt="Characteristic axis ratio plotted against equivalent diameter, agreement with established models.">
+          </figure>
+        </div>
+      </div>
+      <p class="content">
+        Averaging the drop shadow over time produces a stable "characteristic shape" that
+        approximates the equilibrium drop devoid of oscillation. Disk integration of this shape
+        gives a volume-equivalent diameter <em>D</em><sub>0</sub> that agrees with the
+        Beard&nbsp;et&nbsp;al. axis-ratio model and the Beard and Chuang equilibrium shape, and
+        is robust to the noise that plagues single-frame measurements.
+      </p>
+    </div>
+
+    <!-- Card: oscillation modes -->
+    <div class="result-block" id="section-modes">
+      <h3 class="title is-4">Every oscillation mode, from one view</h3>
+      <figure class="image">
+        <img src="static/images/modes.png"
+             alt="Perimeter-frequency spectrogram revealing the axisymmetric, horizontal, transverse, and n=3 oscillation modes from a single camera view.">
+      </figure>
+      <p class="content">
+        By dividing the drop shadow into angular bins and taking the frequency response of the
+        perimeter radius, we render a spectrogram that displays all oscillation modes
+        simultaneously. Three dominant modes emerge, axisymmetric&nbsp;(2,0), horizontal&nbsp;(2,2),
+        and transverse&nbsp;(2,1), plus a higher-order <em>n</em>&nbsp;=&nbsp;3 harmonic. The
+        axisymmetric mode is the most prominent and the most resilient to noise.
+      </p>
+    </div>
+
+    <!-- Card: nanoparticle instability -->
+    <div class="result-block" id="section-nanoparticles">
+      <h3 class="title is-4">Nanoparticles destabilize, then stabilize</h3>
+      <figure class="image">
+        <img src="static/images/nanoparticles.png"
+             alt="Canting-angle dynamics versus nanoparticle concentration, showing destabilization below and stabilization above the saturation concentration.">
+      </figure>
+      <p class="content">
+        At low concentrations (&lt;0.5% m/m), nanoparticles distribute unevenly across the
+        interface, creating surface-tension gradients that excite canting and unsteady
+        orientation. Beyond a nanoparticle saturation concentration (NSC) of ≈0.5% m/m, a
+        uniform surface coating stabilizes the drop. Surfactant pushes the NSC higher by pulling
+        particles into micelles and away from the interface.
+      </p>
+    </div>
+
+    <!-- Card: vertical circulation -->
+    <div class="result-block" id="section-circulation">
+      <h3 class="title is-4">Complete vertical circulation in large drops</h3>
+      <figure class="image">
+        <img src="static/images/circulation.png"
+             alt="Canting angle trace showing a complete vertical circulation in a large (>6 mm) drop.">
+      </figure>
+      <p class="content">
+        For drops larger than ≈6&nbsp;mm, inertial forces overcome surface tension enough that the
+        drop can tumble through a complete vertical circulation; the canting angle sweeps past
+        ±90° and the orientation flips. This dramatic behavior appears only in the largest,
+        near-breakup drops.
+      </p>
+    </div>
+
+    <!-- Card: drag -->
+    <div class="result-block" id="section-drag">
+      <h3 class="title is-4">Drag: linear in Re, predicted by Re·We</h3>
+      <div class="columns is-vcentered figure-pair">
+        <div class="column">
+          <figure class="image">
+            <img src="static/images/drag.png"
+                 alt="Drag coefficient Cd plotted against Reynolds number, approaching the rigid-sphere prediction at small sizes.">
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image">
+            <img src="static/images/drag_1.png"
+                 alt="Cd collapsed against the product Re·We, a superior predictor that unifies inertial, capillary, and viscous effects.">
+          </figure>
+        </div>
+      </div>
+      <p class="content">
+        The drag coefficient rises roughly linearly with Reynolds number and approaches the
+        rigid-sphere value as drops shrink toward a spherical shape. Surface tension shifts the
+        relationship, but the product Re·We collapses the data far better
+        (<em>r</em>&nbsp;=&nbsp;0.76 vs. 0.50 for We alone), capturing the balance between
+        aerodynamic forcing and viscous–capillary restoration.
+      </p>
+    </div>
+
+    <!-- Card: 3D orientation -->
+    <div class="result-block" id="section-orientation">
+      <h3 class="title is-4">3D orientation through time</h3>
+      <figure class="image">
+        <img src="static/images/orientation.png"
+             alt="Azimuthal and zenithal angles of a levitating drop reconstructed instant by instant from the two-camera axis-ratio phase.">
+      </figure>
+      <p class="content">
+        From the phase difference between the two cameras' axis-ratio oscillations, we recover the
+        drop's azimuthal and zenithal angles instant by instant, the first time-resolved 3D
+        orientation of a single levitating drop, rather than the ensemble statistics inferred by
+        prior disdrometer studies.
+      </p>
+    </div>
+
+    <!-- Card: validation since 1879 -->
+    <div class="result-block" id="section-validation">
+      <h3 class="title is-4">Validating theory since 1879</h3>
+      <figure class="image">
+        <img src="static/images/validation.png"
+             alt="Measured oscillation frequencies overlaid on the Rayleigh (1879), Lamb (1932), and Feng and Beard (1991) theoretical models.">
+      </figure>
+      <p class="content">
+        Measured oscillation frequencies sit on top of the classic models, Rayleigh&nbsp;(1879),
+        Lamb&nbsp;(1932), and Feng and Beard&nbsp;(1991), whereas reduced-surface-tension fits
+        track the surfactant-laden drops. Taken together, the experiments are an empirical
+        validation of nearly 150 years of accumulated raindrop theory.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================== SUPPLEMENTARY VIDEOS ============================== -->
+<section class="section has-background-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Supplementary videos</h2>
+    <p class="subtitle is-6 has-text-centered firsts-sub">
+      The three supplementary movies referenced in the paper. A voice-over walkthrough is
+      coming soon.
+    </p>
+    <div class="columns is-multiline">
+
+      <!-- Movie S1 -->
+      <div class="column is-half">
+        <h3 class="is-size-5 has-text-weight-bold has-text-centered">Movie S1: Characteristic shape</h3>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/gqRx2tYpUT4" title="Movie S1: Characteristic shape"
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        <p class="has-text-centered is-size-7">Aggregate drop shadow forming the time-averaged characteristic shape.</p>
+      </div>
+
+      <!-- Movie S2 -->
+      <div class="column is-half">
+        <h3 class="is-size-5 has-text-weight-bold has-text-centered">Movie S2: Oscillation-mode spectrogram</h3>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/DK08tpxX6ds" title="Movie S2: Oscillation-mode spectrogram"
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        <p class="has-text-centered is-size-7">Live perimeter-frequency spectrogram showing all oscillation modes.</p>
+      </div>
+
+      <!-- Movie S3 -->
+      <div class="column is-half">
+        <h3 class="is-size-5 has-text-weight-bold has-text-centered">Movie S3: Complete vertical circulation</h3>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/sFNZcIYLTLI" title="Movie S3: Complete vertical circulation"
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        <p class="has-text-centered is-size-7">A large drop tumbling through a full vertical circulation.</p>
+      </div>
+
+      <!-- Voice-over walkthrough (optional) -->
+      <div class="column is-half">
+        <h3 class="is-size-5 has-text-weight-bold has-text-centered">Voice-over walkthrough <span class="is-size-7">(optional)</span></h3>
+        <!-- TODO(video): optional narrated overview; replace YOUTUBE_ID or delete this column if unused -->
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/YOUTUBE_ID" title="Voice-over walkthrough"
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        <p class="has-text-centered is-size-7">A narrated tour of the paper's methods and findings.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== BIBTEX ============================== -->
+<section class="section" id="citation">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Citation</h2>
+    <div class="content">
+      <pre class="bibtex"><code>@article{rible2026shape,
+  title   = {Shape, oscillation modes, and orientation dynamics of aerodynamically levitated nanofluid drops},
+  author  = {Rible, Gene Patrick S. and Raza, Syed Jaffar and Traynor, Connor K. and
+             Watkins, Joshua T. and Sebek, Hannah P. and Bottoms, Alexander R. and
+             Truscott, Tadd T. and Dickerson, Andrew K.},
+  journal = {Physical Review Fluids},
+  volume  = {11},
+  issue   = {5},
+  pages   = {053604},
+  year    = {2026},
+  publisher = {American Physical Society},
+  doi     = {10.1103/s7rj-swb3},
+  url     = {https://doi.org/10.1103/s7rj-swb3}
+}</code></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ACKNOWLEDGMENTS ============================== -->
+<section class="section has-background-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered">Acknowledgments</h2>
+    <div class="content has-text-centered">
+      <p>
+        This research was done at the Fluids and Structures Laboratory and funded by the
+        National Science Foundation (NSF GEO Grant No.&nbsp;2201828). We thank Jacob Dockery for
+        late-stage experimental efforts toward the levitation of small drops, and Dr.&nbsp;Andy
+        Sarles and McKayla Torbett for goniometer access.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="footer">
+  <div class="container is-max-desktop has-text-centered">
+    <p class="is-size-7">
+      <a href="https://github.com/genepatrickrible/levitated-drops" target="_blank" rel="noopener">Source for this page</a>
+      &nbsp;·&nbsp;
+      Website template borrowed from
+      <a href="https://github.com/nerfies/nerfies.github.io" target="_blank" rel="noopener">Nerfies</a>,
+      used under a
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC&nbsp;BY-SA&nbsp;4.0</a> license.
+    </p>
+  </div>
+</footer>
+
+<script src="static/js/index.js" defer></script>
+</body>
+</html>

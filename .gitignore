@@ -1,0 +1,6 @@
+# macOS junk
+.DS_Store
+**/.DS_Store
+
+# Local scratch work that shouldn't ship
+static/images/scratch/
