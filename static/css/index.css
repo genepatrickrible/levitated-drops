@@ -42,6 +42,15 @@ body {
   display: inline-block;
 }
 
+/* Make the contact email read as a clickable link, not body text. */
+.publication-affiliations a[href^="mailto:"] {
+  color: #3273dc;
+  text-decoration: underline;
+}
+.publication-affiliations a[href^="mailto:"]:hover {
+  color: #1f5cc0;
+}
+
 .publication-venue {
   margin: 1rem 0 1.4rem;
 }

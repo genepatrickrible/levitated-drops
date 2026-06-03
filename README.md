@@ -65,6 +65,23 @@ The page ships with:
 After pushing changes, the live site rebuilds in about a minute. To submit updates to
 Google: Search Console, Sitemaps, resubmit `sitemap.xml`.
 
+## Integrations
+
+### Schedule a meeting (Google Calendar Appointment Scheduling)
+The **Schedule** button in the hero opens a Google Calendar booking page where
+visitors pick a slot and fill an intake form; a calendar invite is sent
+automatically. To change availability or intake fields, edit the appointment
+schedule at calendar.google.com. To swap the URL, edit the single `href` in
+`index.html` under the Schedule `link-block`.
+
+### Community hub (GitHub Discussions + Giscus)
+The **Discussion** button in the hero links to the repo's Discussions tab.
+The bottom of the page embeds a Giscus comment widget backed by the same
+Discussions: comments left on the page become threads in the Announcements
+category. Configuration is in the `<script src="https://giscus.app/client.js" ...>`
+block at the bottom of `index.html`; regenerate at giscus.app if the repo or
+category ever changes.
+
 ## Credits
 
 Page template adapted from [Nerfies](https://github.com/nerfies/nerfies.github.io),
