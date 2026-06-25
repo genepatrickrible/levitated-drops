@@ -210,3 +210,41 @@ pre.bibtex code { color: inherit; background: none; }
 
 /* ----- Footer ----- */
 .footer { padding: 2.5rem 1.5rem; }
+
+/* ----- Lightbox (click a figure to enlarge) ----- */
+figure.image img { cursor: zoom-in; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: zoom-out;
+}
+.lightbox.is-open { display: flex; }
+
+.lightbox-img {
+  max-width: 95vw;
+  max-height: 92vh;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightbox-close:hover { color: #ddd; }

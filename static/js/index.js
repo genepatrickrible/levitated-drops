@@ -65,3 +65,47 @@
     });
   }
 })();
+
+// Lightbox: click any figure image to enlarge it in a full-screen overlay.
+// Click the backdrop, the image, the close button, or press Escape to dismiss.
+(function () {
+  const imgs = document.querySelectorAll('figure.image img');
+  if (!imgs.length) return;
+
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-hidden', 'true');
+  overlay.innerHTML =
+    '<button class="lightbox-close" type="button" aria-label="Close">&times;</button>' +
+    '<img class="lightbox-img" alt="">';
+  document.body.appendChild(overlay);
+
+  const lbImg = overlay.querySelector('.lightbox-img');
+
+  function open(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    lbImg.removeAttribute('src');
+  }
+
+  imgs.forEach((img) => {
+    img.addEventListener('click', () => open(img.currentSrc || img.src, img.alt));
+  });
+
+  // Any click inside the overlay (backdrop, image, or close button) dismisses it.
+  overlay.addEventListener('click', close);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) close();
+  });
+})();
